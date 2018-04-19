@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 
 import { AppBar } from 'material-ui';
-import Home from './Home';
+import Home from './components/Home/Home';
 import { MuiThemeProvider } from 'material-ui/styles';
 import muiTheme from './theme'
 

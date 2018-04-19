@@ -9,6 +9,9 @@ const muiTheme = getMuiTheme({
     primary2Color: grey700,
     accent1Color: redA700,
     pickerHeaderColor: grey500
+  },
+  appBar: {
+    height: 55
   }
 });
 
