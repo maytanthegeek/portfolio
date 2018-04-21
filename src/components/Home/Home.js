@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Scroller, Section } from 'react-fully-scrolled';
 import WOW from 'wowjs';
 import 'animate.css/animate.min.css';
 import './Home.css';
@@ -37,23 +38,29 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div className="home__snap-page">
-                <div className="home-banner">
-                    <div>
-                        <div ref={this.introFirst} className={"wow intro-text " + (this.state.introFirst.in ? "bounceIn " : "bounceOut ") + (this.state.introFirst.active ? "active" : "inactive")} data-wow-duration="3s">
-                            I AM TANMAY
+            <Scroller>
+                <Section>
+                    <div className="home-banner">
+                        <div>
+                            <div ref={this.introFirst} className={"wow intro-text " + (this.state.introFirst.in ? "bounceIn " : "bounceOut ") + (this.state.introFirst.active ? "active" : "inactive")} data-wow-duration="3s">
+                                I AM TANMAY
                         </div>
-                        <div ref={this.introSecond} className={"wow intro-text " + (this.state.introSecond.in ? "bounceIn " : "bounceOut ") + (this.state.introSecond.active ? "active" : "inactive")} data-wow-duration="3s">
-                            I MAKE PROGRAMS LOOK GOOD
+                            <div ref={this.introSecond} className={"wow intro-text " + (this.state.introSecond.in ? "bounceIn " : "bounceOut ") + (this.state.introSecond.active ? "active" : "inactive")} data-wow-duration="3s">
+                                I MAKE PROGRAMS LOOK GOOD
                         </div>
-                        <div ref={this.introThird} className={"wow intro-text " + (this.state.introThird.in ? "bounceIn " : "bounceOut ") + (this.state.introThird.active ? "active" : "inactive")} data-wow-duration="3s">
-                            AND A BIT INTELLIGENT
+                            <div ref={this.introThird} className={"wow intro-text " + (this.state.introThird.in ? "bounceIn " : "bounceOut ") + (this.state.introThird.active ? "active" : "inactive")} data-wow-duration="3s">
+                                AND A BIT INTELLIGENT
+                        </div>
                         </div>
                     </div>
-                </div>
-                <div style={{ background: "green", height: "100%", width: "100%" }}></div>
-                <div style={{ background: "blue", height: "100%", width: "100%" }}></div>
-            </div>
+                </Section>
+                <Section>
+                    <div style={{ background: "green", height: "100%", width: "100%" }}></div>
+                </Section>
+                <Section>
+                    <div style={{ background: "blue", height: "100%", width: "100%" }}></div>
+                </Section>
+            </Scroller>
         );
     }
 
