@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 import './IntroTexts.css';
+
+import React, { useState } from 'react';
 
 export default function IntroTexts() {
   const [isFadeIn, setIsFadeIn] = useState(true);
@@ -31,7 +32,7 @@ export default function IntroTexts() {
       }
       { Math.ceil(currentSlide) === 3
         ? <div className={ isFadeIn ? 'intro-text fadeIn' : 'intro-text fadeOut' }>
-        AND A BIT MORE INTELLIGENT
+        AND PERFORM A LITTLE BETTER
       </div>
         : null
       }

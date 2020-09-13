@@ -1,7 +1,9 @@
+import './Home.css';
+
 import React from 'react';
 import { Scroller, Section } from 'react-fully-scrolled';
 import IntroTexts from './IntroTexts';
-import './Home.css';
+
 
 export default function Home() {
   return (

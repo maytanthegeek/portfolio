@@ -1,12 +1,11 @@
-import './App.css';
 import {
   AppBar, IconButton, ThemeProvider, Toolbar, Typography,
 } from '@material-ui/core';
 import { BrightnessHigh, BrightnessLow } from '@material-ui/icons';
-import { HashRouter, Route, Switch } from 'react-router-dom';
 import React, { useState } from 'react';
-import Home from './components/Home/Home';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { darkTheme, lightTheme, useStyles } from './theme';
+import Home from './components/Home/Home';
 
 export default function App() {
   const [darkState, setDarkState] = useState(true);

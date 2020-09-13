@@ -1,6 +1,6 @@
 .intro-text {
     position: absolute;
-    top: 80%;
+    top: 60%;
     width: 100%;
     text-align: center;
     color: white;
@@ -10,6 +10,12 @@
     animation-duration: 1s;
     animation-timing-function: linear;
     transition: visibility 1s linear;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-text {
+        top: 80%;
+    }
 }
 
 .fadeIn {
