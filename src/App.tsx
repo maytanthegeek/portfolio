@@ -3,7 +3,7 @@ import {
   AppBar, IconButton, ThemeProvider, Toolbar, Typography,
 } from '@material-ui/core';
 import { BrightnessHigh, BrightnessLow } from '@material-ui/icons';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import React, { useState } from 'react';
 import Home from './components/Home/Home';
 import { darkTheme, lightTheme, useStyles } from './theme';
@@ -28,12 +28,12 @@ export default function App() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route exact path="/" component={Home} />
           {/* <Route exact path="/about" component={About}></Route> */}
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
