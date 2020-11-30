@@ -1,11 +1,13 @@
+import ReactFullpage from '@fullpage/react-fullpage';
 import {
   AppBar, IconButton, ThemeProvider, Toolbar, Typography,
 } from '@material-ui/core';
 import { BrightnessHigh, BrightnessLow } from '@material-ui/icons';
 import React, { useState } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
 import { darkTheme, lightTheme, useStyles } from './theme';
-import Home from './components/Home/Home';
+import Cloud from './components/Cloud';
+import IntroTexts from './components/IntroTexts';
+import './App.css';
 
 export default function App() {
   const [darkState, setDarkState] = useState(true);
@@ -27,12 +29,20 @@ export default function App() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <HashRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          {/* <Route exact path="/about" component={About}></Route> */}
-        </Switch>
-      </HashRouter>
+      <ReactFullpage
+        render={() => (
+          <ReactFullpage.Wrapper>
+            <div className="section banner home">
+              <IntroTexts />
+            </div>
+            <div className="section banner section-1">
+              <Cloud />
+            </div>
+            <div className="section banner section-2" />
+            <div className="section banner foot" />
+          </ReactFullpage.Wrapper>
+        )}
+      />
     </ThemeProvider>
   );
 }

@@ -1,4 +1,6 @@
-import { createMuiTheme, responsiveFontSizes, makeStyles, createStyles } from '@material-ui/core/styles';
+import {
+  createMuiTheme, responsiveFontSizes, makeStyles, createStyles,
+} from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
 
 /**
@@ -9,6 +11,9 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
     type: 'light',
     primary: {
       main: grey[500],
+    },
+    background: {
+      paper: 'rgba(255,255,255,0.5)',
     },
   },
 }));
@@ -22,13 +27,14 @@ export const darkTheme = responsiveFontSizes(createMuiTheme({
     primary: {
       main: grey[900],
     },
+    background: {
+      paper: 'rgba(66, 66, 66, 0.4)',
+    },
   },
 }));
 
-export const useStyles = makeStyles(() =>
-  createStyles({
-    title: {
-      flexGrow: 1,
-    }
-  }),
-);
+export const useStyles = makeStyles(() => createStyles({
+  title: {
+    flexGrow: 1,
+  },
+}));

@@ -1,0 +1,26 @@
+.banner {
+    position: relative;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%
+}
+
+.banner.home {
+    background-position: center top;
+    background-image: url("./assets/images/me.jpg");
+}
+
+.banner.section-1 {
+    background-image: url("https://images.unsplash.com/photo-1604067276420-ed543c169968");
+}
+
+.banner.section-2 {
+    background-position: center top;
+    background-image: url("https://images.unsplash.com/photo-1529322365446-6efd62aed02e");
+}
+
+.banner.foot {
+    background-image: url("https://images.unsplash.com/photo-1605375182274-121235a9317e");
+}

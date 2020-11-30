@@ -2,11 +2,14 @@ env:
   browser: true
   es2020: true
 extends:
+  - 'react-app'
   - 'plugin:react/recommended'
   - airbnb-base
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaVersion: 2020
+  ecmaFeatures:
+    jsx: true
   sourceType: module
 plugins:
   - react
@@ -19,6 +22,8 @@ rules:
       jsx: never
       ts: never
       tsx: never
+  no-use-before-define: 0
+  '@typescript-eslint/no-use-before-define': 1
 settings:
   import/resolver:
     node:
