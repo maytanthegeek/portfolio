@@ -13,42 +13,50 @@ import {
 } from '@material-ui/core';
 import { OpenInNew as OpenInNewIcon } from '@material-ui/icons';
 import React from 'react';
-import useIntersect from '../utils/useIntersectHook';
+import useIntersect from '../hooks/useIntersectHook';
+import useResponsive from '../hooks/useResponsive';
 
 export default function Cloud() {
   const projectSection = React.useRef(null);
   const [projectVisible] = useIntersect(projectSection);
+  const fetchByMediaQuery = useResponsive();
 
   const slideTimeout = 2000;
   return (
     <div ref={projectSection}>
     <Container>
-      <Grid container spacing={5}>
-        <Grid item xs={4}>
+      <Grid container spacing={fetchByMediaQuery({ xs: 2, md: 5 })}>
+        <Grid item sm={12} md={4}>
           <Slide direction="right" in={projectVisible} mountOnEnter unmountOnExit timeout={slideTimeout}>
             <Card>
-              <CardMedia className="project-media" image="../assets/images/me.jpg" title="Project One" />
+              <CardMedia className="project-media" image="../assets/images/me.jpg" title="Microservices" />
               <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  This impressive paella is a perfect party dish and a fun meal to cook together
-                  with your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                  Packaged microservices as containers and deployed into a Kubernetes cluster. The
+                  cluster uses Istio service mesh and microservices communicate with each other
+                  over HTTP, gRPC or pubsub.
               </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label="open project">
+                <IconButton
+                  aria-label="open project"
+                  href="https://medium.com/@maytan.thegeek/deploying-microservices-on-eks-a-beginners-guide-part-1-1f6f20425802"
+                  target="_blank">
                   <OpenInNewIcon />
                 </IconButton>
               </CardActions>
             </Card>
           </Slide>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item sm={12} md={4}>
           <Slide direction="up" in={projectVisible} mountOnEnter unmountOnExit timeout={slideTimeout}>
             <Card>
+            <CardMedia className="project-media" image="../assets/images/me.jpg" title="Data Lake" />
               <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  This impressive paella is a perfect party dish and a fun meal to cook together
-                  with your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                  Setup a data lake for big data use cases with AWS S3. Implemented custom ETl
+                  jobs for high quality data availability. This solution is 15x cheaper than
+                  previously existing one with only a 15 min added latency.
               </Typography>
               </CardContent>
               <CardActions disableSpacing>
@@ -56,18 +64,18 @@ export default function Cloud() {
                   <OpenInNewIcon />
                 </IconButton>
               </CardActions>
-              <CardMedia className="project-media" image="../assets/images/me.jpg" title="Project Two" />
             </Card>
           </Slide>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item sm={12} md={4}>
           <Slide direction="down" in={projectVisible} mountOnEnter unmountOnExit timeout={slideTimeout}>
             <Card>
-              <CardMedia className="project-media" image="../assets/images/me.jpg" title="Project Three" />
+              <CardMedia className="project-media" image="../assets/images/me.jpg" title="Device Fleet Provisioning" />
               <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  This impressive paella is a perfect party dish and a fun meal to cook together
-                  with your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                  Created Ansible enabled IoT device fleet with OTA update capabilities. The
+                  devices are edge controllers built on RaspberryPi and run multiple containers
+                  serving different applications.
               </Typography>
               </CardContent>
               <CardActions disableSpacing>
