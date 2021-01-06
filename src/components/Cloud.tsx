@@ -16,6 +16,10 @@ import React from 'react';
 import useIntersect from '../hooks/useIntersectHook';
 import useResponsive from '../hooks/useResponsive';
 
+import microservices from '../assets/images/microservices.png';
+import datalake from '../assets/images/data-lake.png';
+import ansible from '../assets/images/ansible.png';
+
 export default function Cloud() {
   const projectSection = React.useRef(null);
   const [projectVisible] = useIntersect(projectSection);
@@ -29,7 +33,7 @@ export default function Cloud() {
         <Grid item sm={12} md={4}>
           <Slide direction="right" in={projectVisible} mountOnEnter unmountOnExit timeout={slideTimeout}>
             <Card>
-              <CardMedia className="project-media" image="../assets/images/me.jpg" title="Microservices" />
+              <CardMedia className="project-media" image={microservices} title="Microservices" />
               <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                   Packaged microservices as containers and deployed into a Kubernetes cluster. The
@@ -51,12 +55,12 @@ export default function Cloud() {
         <Grid item sm={12} md={4}>
           <Slide direction="up" in={projectVisible} mountOnEnter unmountOnExit timeout={slideTimeout}>
             <Card>
-            <CardMedia className="project-media" image="../assets/images/me.jpg" title="Data Lake" />
+            <CardMedia className="project-media" image={datalake} title="Data Lake" />
               <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Setup a data lake for big data use cases with AWS S3. Implemented custom ETl
-                  jobs for high quality data availability. This solution is 15x cheaper than
-                  previously existing one with only a 15 min added latency.
+                  Setup a data lake for big data use cases with AWS S3. Implemented custom ETL
+                  jobs for high quality data availability. This solution is 15X cheaper than
+                  the previous one with only a 15 min added latency.
               </Typography>
               </CardContent>
               <CardActions disableSpacing>
@@ -70,7 +74,7 @@ export default function Cloud() {
         <Grid item sm={12} md={4}>
           <Slide direction="down" in={projectVisible} mountOnEnter unmountOnExit timeout={slideTimeout}>
             <Card>
-              <CardMedia className="project-media" image="../assets/images/me.jpg" title="Device Fleet Provisioning" />
+              <CardMedia className="project-media" image={ansible} title="Device Fleet Provisioning" />
               <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                   Created Ansible enabled IoT device fleet with OTA update capabilities. The
