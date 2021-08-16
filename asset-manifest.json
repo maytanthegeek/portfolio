@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.44149008.chunk.css",
+    "main.css": "/portfolio/static/css/main.9c773d2e.chunk.css",
     "main.js": "/portfolio/static/js/main.6378b755.chunk.js",
     "main.js.map": "/portfolio/static/js/main.6378b755.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.45a016d8.js",
@@ -8,7 +8,7 @@
     "static/js/2.6172d49f.chunk.js": "/portfolio/static/js/2.6172d49f.chunk.js",
     "static/js/2.6172d49f.chunk.js.map": "/portfolio/static/js/2.6172d49f.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.44149008.chunk.css.map": "/portfolio/static/css/main.44149008.chunk.css.map",
+    "static/css/main.9c773d2e.chunk.css.map": "/portfolio/static/css/main.9c773d2e.chunk.css.map",
     "static/js/2.6172d49f.chunk.js.LICENSE.txt": "/portfolio/static/js/2.6172d49f.chunk.js.LICENSE.txt",
     "static/media/ansible.16ee8012.png": "/portfolio/static/media/ansible.16ee8012.png",
     "static/media/data-lake.65b6ee4b.png": "/portfolio/static/media/data-lake.65b6ee4b.png",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.45a016d8.js",
     "static/js/2.6172d49f.chunk.js",
-    "static/css/main.44149008.chunk.css",
+    "static/css/main.9c773d2e.chunk.css",
     "static/js/main.6378b755.chunk.js"
   ]
 }
