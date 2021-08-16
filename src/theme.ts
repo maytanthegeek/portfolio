@@ -1,12 +1,12 @@
 import {
-  createMuiTheme, responsiveFontSizes, makeStyles, createStyles,
+  createTheme, responsiveFontSizes, makeStyles, createStyles,
 } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
 
 /**
  * Light Theme
  */
-export const lightTheme = responsiveFontSizes(createMuiTheme({
+export const lightTheme = responsiveFontSizes(createTheme({
   palette: {
     type: 'light',
     primary: {
@@ -21,7 +21,7 @@ export const lightTheme = responsiveFontSizes(createMuiTheme({
 /**
  * Dark Theme
  */
-export const darkTheme = responsiveFontSizes(createMuiTheme({
+export const darkTheme = responsiveFontSizes(createTheme({
   palette: {
     type: 'dark',
     primary: {

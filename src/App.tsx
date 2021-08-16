@@ -30,6 +30,7 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <ReactFullpage
+        licenseKey={process.env.REACT_APP_FULLPAGE_LICENSE}
         render={() => (
           <ReactFullpage.Wrapper>
             <div className="section banner home">

@@ -17,10 +17,11 @@
 }
 
 .banner.section-2 {
-    background-position: center top;
-    background-image: url("https://images.unsplash.com/photo-1529322365446-6efd62aed02e");
+    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1495476479092-6ece1898a101");
 }
 
 .banner.foot {
-    background-image: url("https://images.unsplash.com/photo-1605375182274-121235a9317e");
+    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1506619216599-9d16d0903dfd");
 }
